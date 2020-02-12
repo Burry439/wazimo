@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "wazimo": {
@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wazimo:build"
+            "browserTarget": "wazimo:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wazimo"
+    }
+  },
+  "defaultProject": "wazimo",
+  "cli": {
+    "analytics": "263ac580-6a8f-4f99-9727-781434dfe09e"
+  }
 }
