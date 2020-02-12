@@ -10,12 +10,9 @@ export class AppComponent {
   title = 'wazimo';
 
   columnDefs = [
-    {headerName : "Id", field : "id",sortable : true, filter : true},
-    {headerName : "First Name", field : "first_name",sortable : true, filter : true},
-    {headerName : "Last Name", field : "last_name",sortable : true, filter : true},
-    {headerName : "Email", field : "email",sortable : true, filter : true},
-    {headerName : "Gender", field : "gender",sortable : true, filter : true},
-    {headerName : "Ip address", field : "ip_address",sortable : true, filter : true}
+    {headerName : "Make", field : "make", sortable : true, filter : true},
+    {headerName : "Model", field : "model", sortable : true, filter : true},
+    {headerName : "Price", field : "price", sortable : true, filter : true}
   ]
 
   rowData : any;
@@ -23,7 +20,7 @@ export class AppComponent {
   constructor(private http: HttpClient){}
 
   ngOnInit(){
-    this.rowData = this.http.get("https://storage.googleapis.com/static.aoni.io/demo/user.json")
+    this.rowData = this.rowData = this.http.get("https://api.myjson.com/bins/15psn9")
   }
   
 }
