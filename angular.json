@@ -66,8 +66,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wazimo:build",
-            "proxyConfig": "src/proxy.conf.json"
+            "browserTarget": "wazimo:build"
           },
           "configurations": {
             "production": {
